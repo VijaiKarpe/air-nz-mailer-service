@@ -151,7 +151,7 @@ public class EmailController extends DataManager {
         }
     }
 
-    //c. Update one or more properties of draft email
+    //e. Update one or more properties of draft email
     @Operation(summary = "Updates an existing draft", description = "Updates the folder item in the drafts folder based on folder item ID.")
     @PatchMapping("/email/drafts")
     @ResponseStatus(HttpStatus.ACCEPTED)
