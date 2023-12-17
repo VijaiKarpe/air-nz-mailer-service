@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "a2d09112-d024-450a-8224-56bae5e2acff",
+		"name": "DataSetUp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1938307"
+	},
+	"item": [
+		{
+			"name": "Clear_And_Load_Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/data/load",
+					"protocol": "https",
+					"host": [
+						"air",
+						"nz",
+						"testpractice",
+						"io"
+					],
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"data",
+						"load"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

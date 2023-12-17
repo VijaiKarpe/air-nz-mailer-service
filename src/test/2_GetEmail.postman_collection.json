@@ -60,12 +60,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/item?folderItemId=36",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/item?folderItemId=36",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -124,12 +126,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/item?folderItemId=10005",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/item?folderItemId=10005",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -188,12 +192,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/item?folderItemId=-35",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/item?folderItemId=-35",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -249,12 +255,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/item?folderItemId=hello",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/item?folderItemId=hello",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",

@@ -53,12 +53,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/send",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/send",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -119,12 +121,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/send",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/send",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -185,12 +189,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/send",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/send",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -260,12 +266,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/send",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/send",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -325,12 +333,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/send",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email/send",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",

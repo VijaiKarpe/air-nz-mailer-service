@@ -51,12 +51,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -133,12 +135,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=10&pageSize=10&currentPage=1",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=10&pageSize=10&currentPage=1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -215,12 +219,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=20&pageSize=10&currentPage=2",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=20&pageSize=10&currentPage=2",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -297,12 +303,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=30&pageSize=10&currentPage=3",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=30&pageSize=10&currentPage=3",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -379,12 +387,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=40&currentPage=0",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=40&currentPage=0",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -455,12 +465,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=31&pageSize=10&currentPage=5",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=31&pageSize=10&currentPage=5",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -531,12 +543,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=SENT&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email?folder=SENT&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
@@ -606,12 +620,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec_XXX@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
-					"protocol": "http",
+					"raw": "https://air.nz.testpractice.io/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec_XXX@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"air",
+						"nz",
+						"testpractice",
+						"io"
 					],
-					"port": "1300",
 					"path": [
 						"air-nz-mailer-service",
 						"0.0.1",
