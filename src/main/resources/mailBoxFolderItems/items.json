@@ -1,0 +1,626 @@
+[
+  {
+    "folderItemId" : 1,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2023-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 2,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2023-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 3,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2023-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 4,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2022-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 5,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2022-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 6,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2022-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 7,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2021-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 8,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2021-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 9,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2021-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 10,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2020-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 11,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2020-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 12,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2020-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 13,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2019-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 14,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2019-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 15,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2019-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 16,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2018-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 17,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2018-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 18,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2018-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 19,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2017-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 20,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2017-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 21,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2017-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 22,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2016-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 23,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2016-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 24,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2016-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 25,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2015-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 26,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2015-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 27,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2015-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 28,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Andrea Gruber",
+    "senderEmail" : "andrea.gruber@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2014-12-16T22:51:43.218Z"
+  },
+  {
+    "folderItemId" : 29,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Nik Spijkerman",
+    "senderEmail" : "nik.spijkerman@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2014-12-16T22:52:43.218Z"
+  },
+  {
+    "folderItemId" : 30,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Anand Ganapathy",
+    "senderEmail" : "anand.ganapathy@airnz.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2014-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 31,
+    "mailboxOwnerEmail": "karpetec@hotmail.com",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Steven Newman",
+    "senderEmail" : "steven.newman@eroad.co.nz",
+    "recipients": [
+      "vijai.karpe@gmail.com",
+      "vjkarpe@yahoo.com",
+      "vijai.karpe@testpractice.io"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : false,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2014-12-16T22:53:43.218Z"
+  },
+  {
+    "folderItemId" : 32,
+    "mailboxOwnerEmail": "andrea.gruber@airnz.co.nz",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Vijai Karpe",
+    "senderEmail" : "karpetec@hotmail.com",
+    "recipients": [
+      "andrea.gruber@airnz.co.nz"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : true,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2023-12-16T22:53:44.218Z"
+  },
+  {
+    "folderItemId" : 33,
+    "mailboxOwnerEmail": "anand.ganapathy@airnz.co.nz",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Vijai Karpe",
+    "senderEmail" : "karpetec@hotmail.com",
+    "recipients": [
+      "anand.ganapathy@airnz.co.nz"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : true,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2023-12-16T22:54:43.218Z"
+  },
+  {
+    "folderItemId" : 34,
+    "mailboxOwnerEmail": "nik.spijkerman@airnz.co.nz",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Vijai Karpe",
+    "senderEmail" : "karpetec@hotmail.com",
+    "recipients": [
+      "nik.spijkerman@airnz.co.nz"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : true,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2023-12-16T22:55:43.218Z"
+  },
+  {
+    "folderItemId" : 35,
+    "mailboxOwnerEmail": "nik.spijkerman@airnz.co.nz",
+    "mailboxFolder" : "INBOX",
+    "folderItemState" : "READ",
+    "senderName":  "Vijai Karpe",
+    "senderEmail" : "karpetec@hotmail.com",
+    "recipients": [
+      "nik.spijkerman@airnz.co.nz"
+    ],
+    "copiedTo": [],
+    "subject" : "Wish you a Merry Christmas and a Happy New Year",
+    "attachmentExists" : true,
+    "bodyContent" : "Innovation required",
+    "receivedSentOrSavedTimeStamp" : "2023-12-16T22:55:43.218Z"
+  }
+]
+
+

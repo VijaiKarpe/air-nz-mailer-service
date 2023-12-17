@@ -1,0 +1,67 @@
+server:
+  port: 1300
+  servlet:
+    context-path: /air-nz-mailer-service
+  error:
+    include-binding-errors: always
+    include-message: never
+
+spring:
+  application:
+    name: air-nz-mailer-service-0.0.1
+
+rest-client:
+  timeout:
+    read: 3
+    connect: 3
+  scheme: http
+
+responseMessages:
+  internalError: An internal error has occurred, please contact the administrator at karpetec@hotmail.com
+  noEmailFound: No emails were found matching criteria.
+  invalidPaginationParams : Please check the pagination parameters supplied (either pageSize < 1 OR lastFolderItemId < 0 OR currentPage < 0).
+  invalidFolderItemId : The folder item id must be greater than 0.
+  resourceNotFound : No resource found for the ID --
+  corruptData : Corrupt data --
+  setFolder : Set Folder value to --
+  setFolderItemState : Set Folder Item State to --
+  noMailRecipients : Include at least one email recipient.
+  noDraftInUnsentState : No Draft found in an Unsent state for the folderItemId --
+
+#Path to the configuration file for Logging via Logback
+logging:
+  config:
+    classpath: logback.xml
+
+tracing:
+  applicationNameKey: application-name
+  header:
+    correlationIdKey: x-request-id
+
+#Swagger Information
+swaggerInfo:
+  summary: Springboot 3 rest end point for Air NZ Tech Interview
+  groupName: com.air.nz
+  basePackage: com.air.nz
+  title: Air NZ Mailer Service
+  description: Rest End Point
+  version: 0.0.1
+  termsOfService: Terms Of Service
+  license:
+    terms: Terms of Licensing
+    url: www.airnz.testpractice.io/air-nz-mailer-service
+  contactDetails:
+    name: Vijai Karpe
+    url: NA
+    email: karpetec@hotmail.com
+
+
+management:
+  endpoint:
+    restart:
+      enabled: true
+    health:
+      enabled: true
+    info:
+      enabled: true
+

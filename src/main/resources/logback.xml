@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--DECLARE CONSTANTS-->
+    <property name="APP_NAME" value="air-nz-mailer-service" />
+    <property name="LOGS_HOME" value="//Users/vijaikarpe/ServiceLogs/air-nz-mailer-service-0.0.1" />
+    <property name="DEBUG_LOG_MAX_SIZE" value="1MB" />
+    <property name="ERROR_LOG_MAX_SIZE" value="1MB" />
+    <property name="MAX_HISTORY" value="7" />
+    <property name="TOTAL_ARCHIVE_SIZE" value="100MB" />
+
+    <!--CONSOLE BASED LOGGING-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{dd-MM-yyyy HH:mm:ss} %X{application-name} %-5level x-request-id:%X{x-request-id} %C.%M\(%line\) - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <!--FILE BASED LOGGING - DEBUG  - TEXT -->
+    <appender name="FILE-AUDIT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <!-- FILE PATH -->
+        <file>${LOGS_HOME}/${APP_NAME}_debug.log</file>
+
+        <!-- LOGGING PATTERN -->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%d{dd-MM-yyyy HH:mm:ss} %X{application-name} %-5level x-request-id:%X{x-request-id} %C.%M\(%line\) - %msg%n</Pattern>
+        </encoder>
+
+        <!-- ROLL OVER DAILY OR BASED ON THE MAX FILE SIZE / KEEPING A MAXIMUM OF 7 FILES-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS_HOME}/archived/${APP_NAME}_debug.%d{dd-MM-yyyy}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${DEBUG_LOG_MAX_SIZE}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <totalSizeCap>${TOTAL_ARCHIVE_SIZE}</totalSizeCap>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- FILE BASED LOGGING - DEBUG - JSON -->
+    <appender name="FILE-JSON-DEBUG" class="net.logstash.logback.appender.LoggingEventAsyncDisruptorAppender">
+        <appender class="ch.qos.logback.core.rolling.RollingFileAppender" name="T">
+
+            <!-- FILE PATH -->
+            <file>${LOGS_HOME}/${APP_NAME}_debug_JSON.log</file>
+
+            <!-- LOGGING PATTERN -->
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+                <version>0.0.1</version>
+                <timeZone>UTC</timeZone>
+                <timestampPattern>yyyy-MM-dd'T'HH:mm:ss.SSS</timestampPattern>
+                <!-- IGNORE THREAD AND LEVEL VALUES IN THE JSON -->
+                <fieldNames>
+                    <thread>[ignore]</thread>
+                    <levelValue>[ignore]</levelValue>
+                </fieldNames>
+            </encoder>
+
+            <!-- ROLL OVER DAILY OR BASED ON THE MAX FILE SIZE-->
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOGS_HOME}/archived/${APP_NAME}_debug_JSON.%d{dd-MM-yyyy}.%i.log</fileNamePattern>
+                <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                    <maxFileSize>${DEBUG_LOG_MAX_SIZE}</maxFileSize>
+                </timeBasedFileNamingAndTriggeringPolicy>
+                <totalSizeCap>${TOTAL_ARCHIVE_SIZE}</totalSizeCap>
+                <maxHistory>${MAX_HISTORY}</maxHistory>
+            </rollingPolicy>
+        </appender>
+    </appender>
+
+    <!-- FILE BASED LOGGING - ERRORS - TEXT -->
+    <appender name="FILE-ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <!-- FILE PATH -->
+        <file>${LOGS_HOME}/${APP_NAME}_error.log</file>
+
+        <!-- LOGGING PATTERN -->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%d{dd-MM-yyyy HH:mm:ss} %X{application-name} %-5level correlation-id:%X{correlation-id} %C.%M - %msg%n</Pattern>
+        </encoder>
+
+        <!-- ROLL OVER DAILY OR BASED ON THE MAX FILE SIZE / KEEPING A MAXIMUM OF 7 FILES -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS_HOME}/archived/${APP_NAME}_error.%d{dd-MM-yyyy}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${ERROR_LOG_MAX_SIZE}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <totalSizeCap>${TOTAL_ARCHIVE_SIZE}</totalSizeCap>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- FILE BASED LOGGING - ERROR - JSON-->
+    <appender name="FILE-JSON-ERROR" class="net.logstash.logback.appender.LoggingEventAsyncDisruptorAppender">
+        <appender class="ch.qos.logback.core.rolling.RollingFileAppender" name="Z">
+
+            <!-- FILE PATH -->
+            <file>${LOGS_HOME}/${APP_NAME}_error_JSON.log</file>
+
+            <!-- LOGGING PATTERN -->
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+                <version>0.0.1</version>
+                <timeZone>UTC</timeZone>
+                <timestampPattern>yyyy-MM-dd'T'HH:mm:ss.SSS</timestampPattern>
+            </encoder>
+
+            <!-- ROLL OVER DAILY OR BASED ON THE MAX FILE SIZE -->
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOGS_HOME}/archived/${APP_NAME}_error_JSON.%d{dd-MM-yyyy}.%i.log</fileNamePattern>
+                <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                    <maxFileSize>${ERROR_LOG_MAX_SIZE}</maxFileSize>
+                </timeBasedFileNamingAndTriggeringPolicy>
+                <totalSizeCap>${TOTAL_ARCHIVE_SIZE}</totalSizeCap>
+                <maxHistory>${MAX_HISTORY}</maxHistory>
+            </rollingPolicy>
+        </appender>
+    </appender>
+
+    <!-- SEND LOGS TO THE FILES AND CONSOLE -->
+    <logger name="com.air.nz" level="warn" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE-AUDIT" />
+        <appender-ref ref="FILE-JSON-DEBUG" />
+    </logger>
+
+    <root level="error">
+        <appender-ref ref="FILE-ERROR" />
+        <appender-ref ref="FILE-JSON-ERROR" />
+    </root>
+
+</configuration>
