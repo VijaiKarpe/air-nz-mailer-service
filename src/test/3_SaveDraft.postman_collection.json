@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "bfcd68c4-687d-40fe-acf3-5842d9e2d68a",
+		"name": "3_SaveDraft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1938307"
+	},
+	"item": [
+		{
+			"name": "Draft_Not_In_UnSent_State",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validation for Draft Not In Unsent State\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"  ",
+							"    //Message",
+							"    pm.expect(responseJson.message).to.be.equals(\"Set Folder Item State to --UN_SENT\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"receivedSentOrSavedTimeStamp\": \"2023-12-17T08:46:24.211Z\",\n  \"mailboxOwnerEmail\": \"vijai.karpe@gmail.com\",\n  \"mailboxFolder\": \"DRAFTS\",\n  \"folderItemState\": \"READ\",\n  \"senderName\": \"Vijai Karpe\",\n  \"senderEmail\": \"vijai.karpe@gmail.com\",\n  \"recipients\": [\n    \"andrea.gruber@airnz.co.nz\"\n  ],\n  \"copiedTo\": [],\n  \"subject\": \"Wish you a Merry Christmas.\",\n  \"attachmentExists\": false,\n  \"bodyContent\": \"Tech Interview\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/drafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"drafts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Draft_Not_In_DRAFTS_Folder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validation for Draft Not In Drafts Folder\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"  ",
+							"    //Message",
+							"    pm.expect(responseJson.message).to.be.equals(\"Set Folder value to --DRAFTS\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"receivedSentOrSavedTimeStamp\": \"2023-12-17T08:46:24.211Z\",\n  \"mailboxOwnerEmail\": \"vijai.karpe@gmail.com\",\n  \"mailboxFolder\": \"INBOX\",\n  \"folderItemState\": \"UN_SENT\",\n  \"senderName\": \"Vijai Karpe\",\n  \"senderEmail\": \"vijai.karpe@gmail.com\",\n  \"recipients\": [\n    \"andrea.gruber@airnz.co.nz\"\n  ],\n  \"copiedTo\": [],\n  \"subject\": \"Wish you a Merry Christmas.\",\n  \"attachmentExists\": false,\n  \"bodyContent\": \"Tech Interview\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/drafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"drafts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid_Draft",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validation for Draft Not In Unsent State\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([202]);",
+							"  ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"receivedSentOrSavedTimeStamp\": \"2023-12-17T08:46:24.211Z\",\n  \"mailboxOwnerEmail\": \"vijai.karpe@gmail.com\",\n  \"mailboxFolder\": \"DRAFTS\",\n  \"folderItemState\": \"UN_SENT\",\n  \"senderName\": \"Vijai Karpe\",\n  \"senderEmail\": \"vijai.karpe@gmail.com\",\n  \"recipients\": [\n    \"andrea.gruber@airnz.co.nz\"\n  ],\n  \"copiedTo\": [],\n  \"subject\": \"Wish you a Merry Christmas.\",\n  \"attachmentExists\": false,\n  \"bodyContent\": \"Tech Interview\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/drafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"drafts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

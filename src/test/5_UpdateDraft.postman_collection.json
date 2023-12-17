@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "ed4de5a9-69e6-4967-ae70-33b8d5996715",
+		"name": "5_UpdateDraft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1938307"
+	},
+	"item": [
+		{
+			"name": "1_Save_Valid_Draft",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Save Valid Draft\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([202]);",
+							"  ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"receivedSentOrSavedTimeStamp\": \"2023-12-17T08:46:24.211Z\",\n  \"mailboxOwnerEmail\": \"vijai.karpe@gmail.com\",\n  \"mailboxFolder\": \"DRAFTS\",\n  \"folderItemState\": \"UN_SENT\",\n  \"senderName\": \"Vijai Karpe\",\n  \"senderEmail\": \"vijai.karpe@gmail.com\",\n  \"recipients\": [\n    \"andrea.gruber@airnz.co.nz\"\n  ],\n  \"copiedTo\": [],\n  \"subject\": \"Wish you a Merry Christmas.\",\n  \"attachmentExists\": false,\n  \"bodyContent\": \"Tech Interview\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/drafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"drafts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2_Overwrite_Valid_Draft",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Overwrite existing Draft\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([202]);",
+							"  ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"receivedSentOrSavedTimeStamp\": \"2023-12-17T08:46:24.211Z\",\n  \"mailboxOwnerEmail\": \"vijai.karpe@gmail.com\",\n  \"mailboxFolder\": \"DRAFTS\",\n  \"folderItemState\": \"UN_SENT\",\n  \"senderName\": \"Vijai Karpe\",\n  \"senderEmail\": \"vijai.karpe@gmail.com\",\n  \"recipients\": [\n    \"andrea.gruber@airnz.co.nz\",\n    \"karpetec@hotmail.com\"\n  ],\n  \"copiedTo\": [],\n  \"subject\": \"Wish you a Merry Christmas.\",\n  \"attachmentExists\": false,\n  \"bodyContent\": \"UPDATED DRAFT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/drafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"drafts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No_Draft_Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Draft does not exist\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"   //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([404]);",
+							"",
+							"     //Message",
+							"    pm.expect(responseJson.message).to.be.equals(\"No resource found -- \");",
+							"  ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"receivedSentOrSavedTimeStamp\": \"2023-12-17T08:46:24.211Z\",\n  \"mailboxOwnerEmail\": \"vijai.karpe@gmail.com\",\n  \"mailboxFolder\": \"DRAFTS\",\n  \"folderItemState\": \"UN_SENT\",\n  \"senderName\": \"Vijai Karpe\",\n  \"senderEmail\": \"vjkarpe@yahoo.com\",\n  \"recipients\": [\n    \"andrea.gruber@airnz.co.nz\",\n    \"karpetec@hotmail.com\"\n  ],\n  \"copiedTo\": [],\n  \"subject\": \"Wish you a Merry Christmas.\",\n  \"attachmentExists\": false,\n  \"bodyContent\": \"UPDATED DRAFT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/drafts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"drafts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

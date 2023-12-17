@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "5717941d-229e-4d50-a823-58ec9573752d",
+		"name": "2_GetEmail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1938307"
+	},
+	"item": [
+		{
+			"name": "Valid_Email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get an existing Email\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"",
+							"    //Data",
+							"    pm.expect(responseJson.receivedSentOrSavedTimeStamp).to.be.equals(\"2023-12-16T22:52:43.218Z\");",
+							"    pm.expect(responseJson.folderItemId).to.be.equals(2);",
+							"    pm.expect(responseJson.mailboxOwnerEmail).to.be.equals(\"karpetec@hotmail.com\");",
+							"    pm.expect(responseJson.mailboxFolder).to.be.equals(\"INBOX\");",
+							"    pm.expect(responseJson.folderItemState).to.be.equals(\"READ\");",
+							"    pm.expect(responseJson.senderName).to.be.equals(\"Nik Spijkerman\");",
+							"    pm.expect(responseJson.senderEmail).to.be.equals(\"nik.spijkerman@airnz.co.nz\");",
+							"    pm.expect(responseJson.recipients[0]).to.be.equals(\"vijai.karpe@gmail.com\");",
+							"    pm.expect(responseJson.recipients[1]).to.be.equals(\"vjkarpe@yahoo.com\");",
+							"    pm.expect(responseJson.recipients[2]).to.be.equals(\"vijai.karpe@testpractice.io\");",
+							"    pm.expect(responseJson.copiedTo.length).to.be.equals(0);",
+							"    pm.expect(responseJson.subject).to.be.equals(\"Wish you a Merry Christmas and a Happy New Year\");",
+							"    pm.expect(responseJson.attachmentExists).to.be.equals(false);",
+							"    pm.expect(responseJson.bodyContent).to.be.equals(\"Innovation required\");",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/item?folderItemId=36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"item"
+					],
+					"query": [
+						{
+							"key": "folderItemId",
+							"value": "36"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Does_Not_Exist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Error handling, data does not exist for the given folderItemId\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([404]);",
+							"",
+							"    //Message",
+							"    pm.expect(responseJson.message).to.be.equals(\"No resource found -- 10005\");",
+							"  ",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/item?folderItemId=10005",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"item"
+					],
+					"query": [
+						{
+							"key": "folderItemId",
+							"value": "10005"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Negative_Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Error handling for negative folderItemId\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"",
+							"    //Message",
+							"    pm.expect(responseJson.message).to.be.equals(\"The folder item id must be greater than 0.\");",
+							"  ",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/item?folderItemId=-35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"item"
+					],
+					"query": [
+						{
+							"key": "folderItemId",
+							"value": "-35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid_String_Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Error handling for invalid string\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"  ",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email/item?folderItemId=hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email",
+						"item"
+					],
+					"query": [
+						{
+							"key": "folderItemId",
+							"value": "hello"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

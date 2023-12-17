@@ -7,6 +7,7 @@ import com.air.nz.repository.DataManager;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotEmpty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -59,7 +60,7 @@ public class EmailController extends DataManager {
             "The page size must be greater than 0")
     @GetMapping("/email")
     @ResponseStatus(HttpStatus.OK)
-    public FolderItemSearchResults getEmailsForInbox(@RequestHeader(value = "x-request-id") String correlationId, @RequestParam( required = true) FolderItem.MailboxFolder folder, @RequestParam( required = true) String email, @RequestParam( required = true) Integer lastFolderItemId, @RequestParam( required = true) int pageSize,  @RequestParam( required = true) int currentPage) throws Exception {
+    public FolderItemSearchResults getEmailsForInbox(@RequestHeader(value = "x-request-id") String correlationId, @Valid @RequestParam( required = true) FolderItem.MailboxFolder folder, @Valid @NotEmpty @RequestParam( required = true) String email, @Valid @RequestParam( required = true) Integer lastFolderItemId, @Valid @RequestParam( required = true) int pageSize,@Valid @RequestParam( required = true) int currentPage) throws Exception {
 
         try {
             if (pageSize < 1 || lastFolderItemId < 0 || currentPage < 0){
@@ -127,12 +128,12 @@ public class EmailController extends DataManager {
 
             if (folderItem.getRecipients().size() == 0)
                 throw new BadRequestFailure(INCLUDE_MAIL_RECIPIENT);
+            if (folderItem.getMailboxFolder() != FolderItem.MailboxFolder.DRAFTS)
+                throw new BadRequestFailure(SET_FOLDER_TO + FolderItem.MailboxFolder.DRAFTS);
+            if (folderItem.getFolderItemState() != FolderItem.FolderItemState.UN_SENT)
+                throw new BadRequestFailure(SET_FOLDER_ITEM_STATE_TO + FolderItem.FolderItemState.UN_SENT);
 
             if (folderItem.getFolderItemId() != null){
-                if (folderItem.getMailboxFolder() != FolderItem.MailboxFolder.DRAFTS)
-                    throw new BadRequestFailure(SET_FOLDER_TO + FolderItem.MailboxFolder.DRAFTS);
-                if (folderItem.getFolderItemState() != FolderItem.FolderItemState.UN_SENT)
-                    throw new BadRequestFailure(SET_FOLDER_ITEM_STATE_TO + FolderItem.FolderItemState.UN_SENT);
                 FolderItem draftFromMemory = getDraftFromMemory(folderItem.getFolderItemId());
                 if (draftFromMemory != null)
                     return sendEmailFromDrafts(draftFromMemory);
@@ -150,14 +151,14 @@ public class EmailController extends DataManager {
         }
     }
 
-    //c. Write a draft email and save it for later.
+    //c. Update one or more properties of draft email
     @Operation(summary = "Updates an existing draft", description = "Updates the folder item in the drafts folder based on folder item ID.")
     @PatchMapping("/email/drafts")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public BigInteger updateDraft(@RequestHeader(value = "x-request-id") String correlationId, @Valid @RequestBody( required = true) FolderItem folderItem) throws Exception {
 
         try {
-            return saveNewDraftInMemory(folderItem);
+            return updateDraftItemInMemory(folderItem);
 
         }catch (Exception e){
             if (e instanceof ResourceNotFound || e instanceof CorruptData | e instanceof BadRequestFailure)

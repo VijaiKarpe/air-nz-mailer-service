@@ -189,6 +189,25 @@ public class DataManager {
 
         }
     }
+
+    public BigInteger updateDraftItemInMemory(FolderItem folderItem){
+
+        synchronized (availableFolderItems){
+
+            List<FolderItem> draftsMatchingSenderEmail = availableFolderItems.stream().filter(f -> (f.getSenderEmail().equals(folderItem.getSenderEmail()))).collect(Collectors.toList());
+            List<FolderItem> draftsMatchingSubject = draftsMatchingSenderEmail.stream().filter(f -> (f.getSubject().equals(folderItem.getSubject()))).collect(Collectors.toList());
+            Collections.sort(draftsMatchingSubject, Comparator.comparing(FolderItem::getFolderItemId));
+
+            if (draftsMatchingSubject.size() == 1){
+                //There will be no folder item id in the request, hence we need to set it
+                folderItem.setFolderItemId(draftsMatchingSubject.get(0).getFolderItemId());
+                return updateDraftInMemory(folderItem);
+            }else{
+                throw new ResourceNotFound("");
+            }
+
+        }
+    }
     public BigInteger sendNewEmail(FolderItem folderItem) {
 
         folderItem.setMailboxFolder(FolderItem.MailboxFolder.SENT);
@@ -212,7 +231,7 @@ public class DataManager {
     }
 
 
-    public BigInteger updateDraftInMemory(FolderItem folderItem) {
+    private BigInteger updateDraftInMemory(FolderItem folderItem) {
 
         updateMatchingObjectsInMemory(folderItem);
         return folderItem.getFolderItemId();

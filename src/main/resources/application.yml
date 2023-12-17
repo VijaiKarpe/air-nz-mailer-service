@@ -21,7 +21,7 @@ responseMessages:
   noEmailFound: No emails were found matching criteria.
   invalidPaginationParams : Please check the pagination parameters supplied (either pageSize < 1 OR lastFolderItemId < 0 OR currentPage < 0).
   invalidFolderItemId : The folder item id must be greater than 0.
-  resourceNotFound : No resource found for the ID --
+  resourceNotFound : No resource found --
   corruptData : Corrupt data --
   setFolder : Set Folder value to --
   setFolderItemState : Set Folder Item State to --

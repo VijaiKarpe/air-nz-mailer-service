@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "d5099cf0-d5d0-4621-b17d-40662534410e",
+		"name": "1_GetEmailForInbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1938307"
+	},
+	"item": [
+		{
+			"name": "Page_1_Initial_Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Email (First Request)\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"",
+							"",
+							"    pm.expect(responseJson.totalRecords).to.be.equals(31);",
+							"    pm.expect(responseJson.currentPage).to.be.equals(1);",
+							"    pm.expect(responseJson.pageSize).to.be.equals(10);",
+							"    pm.expect(responseJson.totalPages).to.be.equals(4);",
+							"    pm.expect(responseJson.folderItemIdOfLastRecordInPage).to.be.equals(10);",
+							"    pm.expect(responseJson.folderItems.length).to.be.equals(10);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "folder",
+							"value": "INBOX"
+						},
+						{
+							"key": "email",
+							"value": "karpetec@hotmail.com"
+						},
+						{
+							"key": "lastFolderItemId",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "currentPage",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Email (Page 2 Request)\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"",
+							"",
+							"    pm.expect(responseJson.totalRecords).to.be.equals(31);",
+							"    pm.expect(responseJson.currentPage).to.be.equals(2);",
+							"    pm.expect(responseJson.pageSize).to.be.equals(10);",
+							"    pm.expect(responseJson.totalPages).to.be.equals(4);",
+							"    pm.expect(responseJson.folderItemIdOfLastRecordInPage).to.be.equals(20);",
+							"    pm.expect(responseJson.folderItems.length).to.be.equals(10);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=10&pageSize=10&currentPage=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "folder",
+							"value": "INBOX"
+						},
+						{
+							"key": "email",
+							"value": "karpetec@hotmail.com"
+						},
+						{
+							"key": "lastFolderItemId",
+							"value": "10"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "currentPage",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Email (Page 3 Request)\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"",
+							"",
+							"    pm.expect(responseJson.totalRecords).to.be.equals(31);",
+							"    pm.expect(responseJson.currentPage).to.be.equals(3);",
+							"    pm.expect(responseJson.pageSize).to.be.equals(10);",
+							"    pm.expect(responseJson.totalPages).to.be.equals(4);",
+							"    pm.expect(responseJson.folderItemIdOfLastRecordInPage).to.be.equals(30);",
+							"    pm.expect(responseJson.folderItems.length).to.be.equals(10);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=20&pageSize=10&currentPage=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "folder",
+							"value": "INBOX"
+						},
+						{
+							"key": "email",
+							"value": "karpetec@hotmail.com"
+						},
+						{
+							"key": "lastFolderItemId",
+							"value": "20"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "currentPage",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Email (Page 4 Request)\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"",
+							"",
+							"    pm.expect(responseJson.totalRecords).to.be.equals(31);",
+							"    pm.expect(responseJson.currentPage).to.be.equals(4);",
+							"    pm.expect(responseJson.pageSize).to.be.equals(10);",
+							"    pm.expect(responseJson.totalPages).to.be.equals(4);",
+							"    pm.expect(responseJson.folderItemIdOfLastRecordInPage).to.be.equals(31);",
+							"    pm.expect(responseJson.folderItems.length).to.be.equals(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=30&pageSize=10&currentPage=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "folder",
+							"value": "INBOX"
+						},
+						{
+							"key": "email",
+							"value": "karpetec@hotmail.com"
+						},
+						{
+							"key": "lastFolderItemId",
+							"value": "30"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "currentPage",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MaxPageSize",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Email (Page Size is greater than email items - single page)\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+							"",
+							"",
+							"    pm.expect(responseJson.totalRecords).to.be.equals(31);",
+							"    pm.expect(responseJson.currentPage).to.be.equals(1);",
+							"    pm.expect(responseJson.pageSize).to.be.equals(40);",
+							"    pm.expect(responseJson.totalPages).to.be.equals(1);",
+							"    pm.expect(responseJson.folderItemIdOfLastRecordInPage).to.be.equals(31);",
+							"    pm.expect(responseJson.folderItems.length).to.be.equals(31);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=40&currentPage=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "folder",
+							"value": "INBOX"
+						},
+						{
+							"key": "email",
+							"value": "karpetec@hotmail.com"
+						},
+						{
+							"key": "lastFolderItemId",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "40"
+						},
+						{
+							"key": "currentPage",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WrongPaginationCriteria",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Email (Wrong Pagination Criteria - lastFolderItemId is greater than the existing data)\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([404]);",
+							"",
+							"    pm.expect(responseJson.message).to.be.equals(\"No emails were found matching criteria.\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec@hotmail.com&lastFolderItemId=31&pageSize=10&currentPage=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "folder",
+							"value": "INBOX"
+						},
+						{
+							"key": "email",
+							"value": "karpetec@hotmail.com"
+						},
+						{
+							"key": "lastFolderItemId",
+							"value": "31"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "currentPage",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NoDataInFolder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Email (No Emails in folder)\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([404]);",
+							"",
+							"    pm.expect(responseJson.message).to.be.equals(\"No emails were found matching criteria.\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=SENT&email=karpetec@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "folder",
+							"value": "SENT"
+						},
+						{
+							"key": "email",
+							"value": "karpetec@hotmail.com"
+						},
+						{
+							"key": "lastFolderItemId",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "currentPage",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NoDataForUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Email (No Emails For User)\", function () {",
+							"   ",
+							"    //Variables",
+							"    var expectedResponseTimeMilliSec = 1500;",
+							"    var responseJson = pm.response.json();",
+							"",
+							"     //Logging",
+							"    console.log(responseJson);",
+							"",
+							"    //Response Time Test",
+							"    pm.expect(pm.response.responseTime).to.be.below(expectedResponseTimeMilliSec);",
+							"",
+							"    //Response Code",
+							"    pm.expect(pm.response.code).to.be.oneOf([404]);",
+							"    pm.expect(responseJson.message).to.be.equals(\"No emails were found matching criteria.\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-request-id",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1300/air-nz-mailer-service/0.0.1/email?folder=INBOX&email=karpetec_XXX@hotmail.com&lastFolderItemId=0&pageSize=10&currentPage=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1300",
+					"path": [
+						"air-nz-mailer-service",
+						"0.0.1",
+						"email"
+					],
+					"query": [
+						{
+							"key": "folder",
+							"value": "INBOX"
+						},
+						{
+							"key": "email",
+							"value": "karpetec_XXX@hotmail.com"
+						},
+						{
+							"key": "lastFolderItemId",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "currentPage",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
